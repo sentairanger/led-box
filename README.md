@@ -1,2 +1,3 @@
-# led-box
-An led box project using Maven
+# LED-Box
+
+This is a project that uses buttons and LEDs along with Maven. This can run on any Raspberry Pi remotely and can be run with an IDE like IntelliJ Idea and in a command line. To run this on a command line make sure to have Maven installed first. You can find Maven [here](https://maven.apache.org/download.cgi). To run this application, first change to the directory where the `pom.xml` file is located. Then package the application with `mvn package`. It will create a target directory. Then change to the directory and find the `led-box-1.0-SNAPSHOT-jar-with-dependencies.jar` file. Next, make sure that Remote GPIO is enabled on the Pi with `sudo pigpiod` and then run this command: `java -jar -DPIGPIOD_HOST=<ip-address-of-pi> led-box-1.0-SNAPSHOT-jar-with-dependencies.jar`. This command runs the newly created JAR file and also looks for the remote Pi host. Then press the buttons and the LEDs should turn on and off.
